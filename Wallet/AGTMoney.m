@@ -9,16 +9,36 @@
 #import "NSObject+GNUStep.h"
 #import "AGTMoney.h"
 
+@interface AGTMoney ()
+@property (nonatomic) NSUInteger amount;
+@end
 @implementation AGTMoney
 
 -(id) initWithAmount:(NSUInteger)amount{
     
-    return [self subclassResponsibility:_cmd];
+    if (self = [super init]) {
+        _amount = amount;
+    }
+    
+    return self;
+
 }
 
 -(AGTMoney*) times:(NSUInteger)multiplier{
-    return [self subclassResponsibility:_cmd];
+    
+    return [[AGTMoney alloc]
+            initWithAmount:self.amount * multiplier];
 }
+
+
+
+#pragma mark - Equality
+-(BOOL)isEqual:(id)object{
+    
+    return [self amount] == [object amount];
+}
+
+
 
 
 @end

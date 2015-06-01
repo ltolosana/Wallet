@@ -7,33 +7,9 @@
 //
 
 #import "AGTEuro.h"
+#import "AGTMoneyPrivate.h"
 
-@interface AGTEuro ()
-@property (nonatomic) NSUInteger amount;
-@end
 @implementation AGTEuro
-
--(id) initWithAmount:(NSUInteger) amount{
-    
-    if (self = [super init]) {
-        _amount = amount;
-    }
-    return self;
-    
-}
-
--(AGTMoney*) times:(NSUInteger) multiplier{
-    return [[AGTEuro alloc]
-            initWithAmount:self.amount * multiplier];
-}
-
-
-#pragma mark - Equality
--(BOOL)isEqual:(id)object{
-    
-    return [self amount] == [object amount];
-}
-
 
 
 

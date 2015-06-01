@@ -59,6 +59,7 @@
 		ED49C8481B1D08D500D683CE /* NSObject+GNUStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStep.h"; sourceTree = "<group>"; };
 		ED49C8491B1D08D500D683CE /* NSObject+GNUStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStep.m"; sourceTree = "<group>"; };
 		ED49C84D1B1D0B1800D683CE /* AGTMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMoneyTests.m; sourceTree = "<group>"; };
+		ED49C84F1B1D0D1C00D683CE /* AGTMoneyPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGTMoneyPrivate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +152,7 @@
 				ED49C8421B1D051400D683CE /* AGTDollar.m */,
 				ED49C8441B1D06D900D683CE /* AGTMoney.h */,
 				ED49C8451B1D06D900D683CE /* AGTMoney.m */,
+				ED49C84F1B1D0D1C00D683CE /* AGTMoneyPrivate.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";

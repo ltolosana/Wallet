@@ -26,10 +26,10 @@
     [super tearDown];
 }
 
--(void) testThatInitRaisesException{
+-(void) testThatInitDoesNotRaiseException{
     
     
-    XCTAssertThrows([[AGTMoney alloc] initWithAmount:3]);
+    XCTAssertNoThrow([[AGTMoney alloc] initWithAmount:3]);
     
     
 }
