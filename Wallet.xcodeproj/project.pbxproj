@@ -15,8 +15,6 @@
 		ED49C8231B1CF38E00D683CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED49C8211B1CF38E00D683CE /* LaunchScreen.xib */; };
 		ED49C8461B1D06D900D683CE /* AGTMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C8451B1D06D900D683CE /* AGTMoney.m */; };
 		ED49C8471B1D06D900D683CE /* AGTMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C8451B1D06D900D683CE /* AGTMoney.m */; };
-		ED49C84A1B1D08D500D683CE /* NSObject+GNUStep.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C8491B1D08D500D683CE /* NSObject+GNUStep.m */; };
-		ED49C84B1B1D08D500D683CE /* NSObject+GNUStep.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C8491B1D08D500D683CE /* NSObject+GNUStep.m */; };
 		ED49C84E1B1D0B1800D683CE /* AGTMoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C84D1B1D0B1800D683CE /* AGTMoneyTests.m */; };
 /* End PBXBuildFile section */
 
@@ -45,10 +43,7 @@
 		ED49C82D1B1CF38E00D683CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED49C8441B1D06D900D683CE /* AGTMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMoney.h; sourceTree = "<group>"; };
 		ED49C8451B1D06D900D683CE /* AGTMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMoney.m; sourceTree = "<group>"; };
-		ED49C8481B1D08D500D683CE /* NSObject+GNUStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStep.h"; sourceTree = "<group>"; };
-		ED49C8491B1D08D500D683CE /* NSObject+GNUStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStep.m"; sourceTree = "<group>"; };
 		ED49C84D1B1D0B1800D683CE /* AGTMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMoneyTests.m; sourceTree = "<group>"; };
-		ED49C84F1B1D0D1C00D683CE /* AGTMoneyPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGTMoneyPrivate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +130,6 @@
 			children = (
 				ED49C8441B1D06D900D683CE /* AGTMoney.h */,
 				ED49C8451B1D06D900D683CE /* AGTMoney.m */,
-				ED49C84F1B1D0D1C00D683CE /* AGTMoneyPrivate.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -143,8 +137,6 @@
 		ED49C84C1B1D08DE00D683CE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				ED49C8481B1D08D500D683CE /* NSObject+GNUStep.h */,
-				ED49C8491B1D08D500D683CE /* NSObject+GNUStep.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -249,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED49C84A1B1D08D500D683CE /* NSObject+GNUStep.m in Sources */,
 				ED49C81B1B1CF38E00D683CE /* ViewController.m in Sources */,
 				ED49C8181B1CF38E00D683CE /* AppDelegate.m in Sources */,
 				ED49C8461B1D06D900D683CE /* AGTMoney.m in Sources */,
@@ -262,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED49C8471B1D06D900D683CE /* AGTMoney.m in Sources */,
-				ED49C84B1B1D08D500D683CE /* NSObject+GNUStep.m in Sources */,
 				ED49C84E1B1D0B1800D683CE /* AGTMoneyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

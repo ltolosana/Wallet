@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Agbo. All rights reserved.
 //
 
-#import "NSObject+GNUStep.h"
+
 #import "AGTMoney.h"
 
 @interface AGTMoney ()
