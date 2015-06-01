@@ -29,7 +29,51 @@
 -(void) testThatInitDoesNotRaiseException{
     
     
-    XCTAssertNoThrow([[AGTMoney alloc] initWithAmount:3]);
+    XCTAssertNoThrow([AGTMoney dollarWithAmount:3]);
+    XCTAssertNoThrow([AGTMoney euroWithAmount:3]);
+    
+}
+
+
+-(void) testCurrency{
+    
+    AGTMoney *dollars = [AGTMoney dollarWithAmount:1];
+    
+    XCTAssertEqualObjects(@"USD", [dollars currency]);
+    
+    AGTMoney *euros = [AGTMoney euroWithAmount:1];
+    
+    XCTAssertEqualObjects(@"EUR", [euros currency]);
+
+}
+
+
+-(void) testMultiplication{
+    
+    
+    AGTMoney *five = [AGTMoney euroWithAmount:5];
+    AGTMoney *product = [five times: 2];
+    XCTAssertEqualObjects(product, [AGTMoney euroWithAmount:10]);
+    
+    
+    AGTMoney *fiveUSD = [AGTMoney dollarWithAmount:5];
+    AGTMoney *productUSD = [fiveUSD times:2];
+    
+    XCTAssertEqualObjects(productUSD, [AGTMoney dollarWithAmount:10]);
+    
+}
+
+-(void) testEquality{
+    
+    AGTMoney *five = [AGTMoney euroWithAmount:5];
+    AGTMoney *otherFive = [AGTMoney euroWithAmount:5];
+    
+    XCTAssertEqualObjects(five, otherFive);
+    
+    
+    AGTMoney *seven = [AGTMoney euroWithAmount:7];
+    
+    XCTAssertNotEqualObjects(seven, five);
     
     
 }
