@@ -20,4 +20,6 @@
 
 -(AGTMoney*) times:(NSUInteger) multiplier;
 
+-(AGTMoney *) plus:(AGTMoney *) other;
+
 @end

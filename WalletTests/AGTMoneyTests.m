@@ -98,6 +98,10 @@
 }
 
 
+-(void) testSimpleAddition{
+    
+    XCTAssertEqualObjects([[AGTMoney dollarWithAmount:5] plus: [AGTMoney dollarWithAmount:5]], [AGTMoney dollarWithAmount:10], @"$5 + $5 = $10");
+}
 
 
 

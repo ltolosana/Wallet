@@ -49,6 +49,14 @@
             currency:self.currency];
 }
 
+-(AGTMoney *) plus:(AGTMoney *) other{
+    
+    NSUInteger totalAmount = self.amount + other.amount;
+    AGTMoney *total = [[AGTMoney alloc] initWithAmount:totalAmount
+                                              currency:self.currency];
+    
+    return total;
+}
 
 
 #pragma mark - Equality
