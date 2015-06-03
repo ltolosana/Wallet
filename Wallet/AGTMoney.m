@@ -54,10 +54,18 @@
 #pragma mark - Equality
 -(BOOL)isEqual:(id)object{
     
-    return [self amount] == [object amount];
+    if ([self.currency isEqual:[object currency] ]) {
+        return [self amount] == [object amount];
+    }else{
+        return NO;
+    }
+    
 }
 
-
+-(NSUInteger) hash{
+    
+    return (NSUInteger) self.amount;
+}
 
 
 @end

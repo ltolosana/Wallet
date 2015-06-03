@@ -79,9 +79,23 @@
 }
 
 
+-(void) testDifferentCurrencies{
+    
+    AGTMoney *euro = [AGTMoney euroWithAmount:1];
+    AGTMoney *dollar = [AGTMoney dollarWithAmount:1];
+    
+    XCTAssertNotEqualObjects(euro, dollar, @"Different currencies should not be equal!");
+}
 
 
-
+-(void) testHash{
+    
+    AGTMoney *a = [AGTMoney euroWithAmount:2];
+    AGTMoney *b = [AGTMoney euroWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
+    XCTAssertEqual([[AGTMoney dollarWithAmount:1] hash], [[AGTMoney dollarWithAmount:1] hash], @"Equal objects must have same hash");
+}
 
 
 
