@@ -10,7 +10,8 @@
 
 @interface AGTMoney : NSObject
 
-@property (copy, readonly) NSString *currency;
+@property (nonatomic, readonly) NSUInteger amount;
+@property (nonatomic, copy, readonly) NSString *currency;
 
 +(instancetype) dollarWithAmount:(NSUInteger) amount;
 +(instancetype) euroWithAmount:(NSUInteger) amount;

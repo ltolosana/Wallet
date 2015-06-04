@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60EAFC1E1B1F90F700CE3AA6 /* LMTBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EAFC1D1B1F90F700CE3AA6 /* LMTBrokerTests.m */; };
+		60EAFC221B1F923A00CE3AA6 /* LMTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EAFC211B1F923A00CE3AA6 /* LMTBroker.m */; };
+		60EAFC231B1F923A00CE3AA6 /* LMTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EAFC211B1F923A00CE3AA6 /* LMTBroker.m */; };
 		ED49C8151B1CF38E00D683CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C8141B1CF38E00D683CE /* main.m */; };
 		ED49C8181B1CF38E00D683CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C8171B1CF38E00D683CE /* AppDelegate.m */; };
 		ED49C81B1B1CF38E00D683CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C81A1B1CF38E00D683CE /* ViewController.m */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60EAFC1D1B1F90F700CE3AA6 /* LMTBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTBrokerTests.m; sourceTree = "<group>"; };
+		60EAFC201B1F923A00CE3AA6 /* LMTBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMTBroker.h; sourceTree = "<group>"; };
+		60EAFC211B1F923A00CE3AA6 /* LMTBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTBroker.m; sourceTree = "<group>"; };
 		ED49C80F1B1CF38E00D683CE /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED49C8131B1CF38E00D683CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED49C8141B1CF38E00D683CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60EAFC1F1B1F920300CE3AA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED49C84D1B1D0B1800D683CE /* AGTMoneyTests.m */,
+				60EAFC1D1B1F90F700CE3AA6 /* LMTBrokerTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		ED49C8061B1CF38E00D683CE = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +126,8 @@
 		ED49C82B1B1CF38E00D683CE /* WalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				60EAFC1F1B1F920300CE3AA6 /* Models */,
 				ED49C82C1B1CF38E00D683CE /* Supporting Files */,
-				ED49C84D1B1D0B1800D683CE /* AGTMoneyTests.m */,
 			);
 			path = WalletTests;
 			sourceTree = "<group>";
@@ -130,6 +145,8 @@
 			children = (
 				ED49C8441B1D06D900D683CE /* AGTMoney.h */,
 				ED49C8451B1D06D900D683CE /* AGTMoney.m */,
+				60EAFC201B1F923A00CE3AA6 /* LMTBroker.h */,
+				60EAFC211B1F923A00CE3AA6 /* LMTBroker.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -241,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60EAFC221B1F923A00CE3AA6 /* LMTBroker.m in Sources */,
 				ED49C81B1B1CF38E00D683CE /* ViewController.m in Sources */,
 				ED49C8181B1CF38E00D683CE /* AppDelegate.m in Sources */,
 				ED49C8461B1D06D900D683CE /* AGTMoney.m in Sources */,
@@ -252,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60EAFC231B1F923A00CE3AA6 /* LMTBroker.m in Sources */,
+				60EAFC1E1B1F90F700CE3AA6 /* LMTBrokerTests.m in Sources */,
 				ED49C8471B1D06D900D683CE /* AGTMoney.m in Sources */,
 				ED49C84E1B1D0B1800D683CE /* AGTMoneyTests.m in Sources */,
 			);
@@ -440,6 +460,7 @@
 				ED49C8341B1CF38E00D683CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED49C8351B1CF38E00D683CE /* Build configuration list for PBXNativeTarget "WalletTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +469,7 @@
 				ED49C8371B1CF38E00D683CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

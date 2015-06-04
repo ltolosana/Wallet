@@ -58,6 +58,12 @@
     return total;
 }
 
+#pragma mark - Description
+//-(NSString *) description{
+//    
+//    return [NSString stringWithFormat:@"<%@: %@ %@>", [self class], self.currency, self.amount];
+//}
+
 
 #pragma mark - Equality
 -(BOOL)isEqual:(id)object{
@@ -72,7 +78,7 @@
 
 -(NSUInteger) hash{
     
-    return (NSUInteger) self.amount;
+    return self.amount;
 }
 
 
