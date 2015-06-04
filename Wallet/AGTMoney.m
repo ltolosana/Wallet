@@ -42,14 +42,14 @@
 
 }
 
--(AGTMoney*) times:(NSUInteger)multiplier{
+-(id<AGTMoney>) times:(NSUInteger)multiplier{
     
     return [[AGTMoney alloc]
             initWithAmount:_amount * multiplier
             currency:self.currency];
 }
 
--(AGTMoney *) plus:(AGTMoney *) other{
+-(id<AGTMoney>) plus:(AGTMoney *) other{
     
     NSUInteger totalAmount = self.amount + other.amount;
     AGTMoney *total = [[AGTMoney alloc] initWithAmount:totalAmount

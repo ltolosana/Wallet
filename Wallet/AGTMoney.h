@@ -8,7 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AGTMoney : NSObject
+@class AGTMoney;
+
+@protocol AGTMoney <NSObject>
+
+-(id) initWithAmount:(NSUInteger) amount
+            currency:(NSString*) currency;
+
+-(id<AGTMoney>) times:(NSUInteger) multiplier;
+
+-(id<AGTMoney>) plus:(AGTMoney *) other;
+
+@end
+
+@interface AGTMoney : NSObject<AGTMoney>
 
 @property (nonatomic, readonly) NSUInteger amount;
 @property (nonatomic, copy, readonly) NSString *currency;
@@ -16,11 +29,5 @@
 +(instancetype) dollarWithAmount:(NSUInteger) amount;
 +(instancetype) euroWithAmount:(NSUInteger) amount;
 
--(id) initWithAmount:(NSUInteger) amount
-            currency:(NSString*) currency;
-
--(AGTMoney*) times:(NSUInteger) multiplier;
-
--(AGTMoney *) plus:(AGTMoney *) other;
 
 @end

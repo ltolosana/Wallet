@@ -7,11 +7,11 @@
 //
 
 @import Foundation;
-@class AGTMoney;
+#import "AGTMoney.h"
 
 @interface LMTBroker : NSObject
 
--(AGTMoney *) reduce:(AGTMoney *) money toCurrency:(NSString *) currency;
+-(id<AGTMoney>) reduce:(AGTMoney *) money toCurrency:(NSString *) currency;
 
 -(void) addRate:(NSUInteger) rate fromCurrency:(NSString *) fromCurrency toCurrency:(NSString *) toCurrency;
 

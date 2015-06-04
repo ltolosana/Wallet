@@ -27,7 +27,7 @@
     return self;
 }
 
--(AGTMoney *) reduce:(AGTMoney *) money toCurrency:(NSString *) currency{
+-(id<AGTMoney>) reduce:(AGTMoney *) money toCurrency:(NSString *) currency{
 
     AGTMoney *result;
     NSUInteger rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency

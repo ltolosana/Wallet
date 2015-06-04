@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60E4AB8B1B2059C4009DD79B /* LMTWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E4AB8A1B2059C4009DD79B /* LMTWalletTests.m */; };
+		60E4AB8E1B205C16009DD79B /* LMTWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E4AB8D1B205C16009DD79B /* LMTWallet.m */; };
+		60E4AB8F1B205C16009DD79B /* LMTWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E4AB8D1B205C16009DD79B /* LMTWallet.m */; };
 		60EAFC1E1B1F90F700CE3AA6 /* LMTBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EAFC1D1B1F90F700CE3AA6 /* LMTBrokerTests.m */; };
 		60EAFC221B1F923A00CE3AA6 /* LMTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EAFC211B1F923A00CE3AA6 /* LMTBroker.m */; };
 		60EAFC231B1F923A00CE3AA6 /* LMTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EAFC211B1F923A00CE3AA6 /* LMTBroker.m */; };
@@ -32,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60E4AB8A1B2059C4009DD79B /* LMTWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTWalletTests.m; sourceTree = "<group>"; };
+		60E4AB8C1B205C16009DD79B /* LMTWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMTWallet.h; sourceTree = "<group>"; };
+		60E4AB8D1B205C16009DD79B /* LMTWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTWallet.m; sourceTree = "<group>"; };
 		60EAFC1D1B1F90F700CE3AA6 /* LMTBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTBrokerTests.m; sourceTree = "<group>"; };
 		60EAFC201B1F923A00CE3AA6 /* LMTBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMTBroker.h; sourceTree = "<group>"; };
 		60EAFC211B1F923A00CE3AA6 /* LMTBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTBroker.m; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 			children = (
 				ED49C84D1B1D0B1800D683CE /* AGTMoneyTests.m */,
 				60EAFC1D1B1F90F700CE3AA6 /* LMTBrokerTests.m */,
+				60E4AB8A1B2059C4009DD79B /* LMTWalletTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -147,6 +154,8 @@
 				ED49C8451B1D06D900D683CE /* AGTMoney.m */,
 				60EAFC201B1F923A00CE3AA6 /* LMTBroker.h */,
 				60EAFC211B1F923A00CE3AA6 /* LMTBroker.m */,
+				60E4AB8C1B205C16009DD79B /* LMTWallet.h */,
+				60E4AB8D1B205C16009DD79B /* LMTWallet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -258,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E4AB8E1B205C16009DD79B /* LMTWallet.m in Sources */,
 				60EAFC221B1F923A00CE3AA6 /* LMTBroker.m in Sources */,
 				ED49C81B1B1CF38E00D683CE /* ViewController.m in Sources */,
 				ED49C8181B1CF38E00D683CE /* AppDelegate.m in Sources */,
@@ -270,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E4AB8F1B205C16009DD79B /* LMTWallet.m in Sources */,
+				60E4AB8B1B2059C4009DD79B /* LMTWalletTests.m in Sources */,
 				60EAFC231B1F923A00CE3AA6 /* LMTBroker.m in Sources */,
 				60EAFC1E1B1F90F700CE3AA6 /* LMTBrokerTests.m in Sources */,
 				ED49C8471B1D06D900D683CE /* AGTMoney.m in Sources */,
