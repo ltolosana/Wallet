@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class AGTMoney;
+@class LMTBroker;
 
 @protocol AGTMoney <NSObject>
 
@@ -18,6 +19,8 @@
 -(id<AGTMoney>) times:(NSUInteger) multiplier;
 
 -(id<AGTMoney>) plus:(AGTMoney *) other;
+
+-(id<AGTMoney>) reduceToCurrency:(NSString *) currency withBroker:(LMTBroker *) broker;
 
 @end
 

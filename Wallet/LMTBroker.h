@@ -11,8 +11,12 @@
 
 @interface LMTBroker : NSObject
 
--(id<AGTMoney>) reduce:(AGTMoney *) money toCurrency:(NSString *) currency;
+@property (nonatomic, strong) NSMutableDictionary *rates;
+
+-(AGTMoney *) reduce:(id<AGTMoney>) money toCurrency:(NSString *) currency;
 
 -(void) addRate:(NSUInteger) rate fromCurrency:(NSString *) fromCurrency toCurrency:(NSString *) toCurrency;
+
+-(NSString *) keyFromCurrency:(NSString *) fromCurrency toCurrency:(NSString *) toCurrency;
 
 @end

@@ -9,11 +9,6 @@
 #import "LMTBroker.h"
 #import "AGTMoney.h"
 
-@interface LMTBroker ()
-
-@property (nonatomic, strong) NSMutableDictionary *rates;
-
-@end
 
 @implementation LMTBroker
 
@@ -27,31 +22,11 @@
     return self;
 }
 
--(id<AGTMoney>) reduce:(AGTMoney *) money toCurrency:(NSString *) currency{
+-(AGTMoney *) reduce:(id<AGTMoney>) money toCurrency:(NSString *) currency{
 
-    AGTMoney *result;
-    NSUInteger rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency
-                                                           toCurrency:currency]] integerValue];
-    
-    // Comprobamos que divisa de origen y destino son las mismas
-    if ([money.currency isEqual:currency]) {
-        result = money;
-    }else if (rate == 0){
-        // no hay tasa de convesrion, excepcion que te crio
-        [NSException raise:@"NoConversionRateException"
-                    format:@"Must have a conversion from %@ to %@", money.currency, currency];
-    }else{
-        // Tenemos conversion
-//        NSUInteger rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency
-//                                                              toCurrency:currency]] integerValue];
-        NSUInteger newAmount = money.amount * rate;
-        
-        result = [[AGTMoney alloc] initWithAmount:newAmount
-                                                     currency:currency];
-    }
-    
-
-    return result;
+    // Double dispatch
+    return [money reduceToCurrency:currency
+                        withBroker:self];
 }
 
 -(void) addRate:(NSUInteger) rate fromCurrency:(NSString *) fromCurrency toCurrency:(NSString *) toCurrency{

@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 Agbo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+#import "AGTMoney.h"
 
-@interface LMTWallet : NSObject
+@interface LMTWallet : NSObject<AGTMoney>
 
 @end
