@@ -44,4 +44,16 @@
     
 }
 
+// 1€ + $1 = 2 currencies
+-(void) testCountCurrencies{
+    
+    LMTWallet *wallet = [[LMTWallet alloc] initWithAmount:1 currency:@"EUR"];
+    [wallet plus: [AGTMoney dollarWithAmount:1]];
+
+    NSInteger numberOfCurrencies = wallet.countCurrencies;
+    
+    XCTAssertEqual(numberOfCurrencies, 2, @"1€ + $1 = 2 currencies");
+    
+}
+
 @end

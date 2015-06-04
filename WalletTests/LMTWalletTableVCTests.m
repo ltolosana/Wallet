@@ -36,12 +36,20 @@
     [super tearDown];
 }
 
--(void) testThatTableHasOneSection{
+//-(void) testThatTableHasOneSection{
+//    
+//    NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
+//    XCTAssertEqual(sections, 1, @"There can only be one!");
+//    
+//}
+
+-(void) testThatNumberOfSectionsIsNumberOfCurrenciesPlusOne{
     
     NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    XCTAssertEqual(sections, 1, @"There can only be one!");
-    
+    XCTAssertEqual(sections, self.wallet.countCurrencies + 1, @"Number of sections is the number of unique currencies + 1");
 }
+
+
 
 -(void) testThatNumberOfCellsIsNumberOfMoneysPlusOne{
     

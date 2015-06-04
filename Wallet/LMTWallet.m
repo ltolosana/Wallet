@@ -21,6 +21,15 @@
     return [self.moneys count];
 }
 
+-(NSInteger) countCurrencies{
+    
+    NSSet *uniqueCurrencies = [NSSet setWithArray:[self.moneys valueForKey:@"currency"]];
+    
+    return [uniqueCurrencies count];
+    
+}
+
+
 -(id) initWithAmount:(NSUInteger)amount currency:(NSString *)currency{
     
     if (self = [super init]) {
