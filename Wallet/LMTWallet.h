@@ -11,4 +11,6 @@
 
 @interface LMTWallet : NSObject<AGTMoney>
 
+@property (nonatomic, readonly) NSUInteger count;
+
 @end
