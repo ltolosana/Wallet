@@ -56,4 +56,29 @@
     
 }
 
+
+-(void) testCountEuros{
+    
+    LMTWallet *wallet = [[LMTWallet alloc] initWithAmount:5 currency:@"EUR"];
+    [wallet plus: [AGTMoney dollarWithAmount:5]];
+    
+    NSInteger numberOfEuros = wallet.countEuros;
+    
+    XCTAssertEqual(numberOfEuros, 1, @"1 Euro");
+    
+}
+
+-(void) testCountDollars{
+    
+    LMTWallet *wallet = [[LMTWallet alloc] initWithAmount:5 currency:@"EUR"];
+    [wallet plus: [AGTMoney dollarWithAmount:5]];
+    
+    NSInteger numberOfDollars = wallet.countDollars;
+    
+    XCTAssertEqual(numberOfDollars, 1, @"1 Dollar");
+    
+}
+
+
+
 @end

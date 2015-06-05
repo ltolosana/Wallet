@@ -34,6 +34,8 @@
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    self.wallet = nil;
+    self.walletVC = nil;
 }
 
 //-(void) testThatTableHasOneSection{
@@ -53,7 +55,15 @@
 
 -(void) testThatNumberOfCellsIsNumberOfMoneysPlusOne{
     
-    XCTAssertEqual(self.wallet.count + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells is the number of moneys plus 1 (the total)");
+//    XCTAssertEqual(self.wallet.count + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells is the number of moneys plus 1 (the total)");
+  
+    XCTAssertEqual(self.wallet.countEuros + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells of Euros is the number of Euro moneys");
+    
+    XCTAssertEqual(self.wallet.countDollars + 1, [self.walletVC tableView:nil numberOfRowsInSection:1], @"Number of cells of Dollars is the number of Dollar moneys");
+
+    XCTAssertEqual(1, [self.walletVC tableView:nil numberOfRowsInSection:2], @"Number of cells of Total is 1");
+
+    
 }
 
 
