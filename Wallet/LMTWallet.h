@@ -16,4 +16,6 @@
 @property (nonatomic, readonly) NSUInteger countEuros;
 @property (nonatomic, readonly) NSUInteger countDollars;
 
+-(LMTWallet *) takeMoney: (AGTMoney *) money;
+
 @end

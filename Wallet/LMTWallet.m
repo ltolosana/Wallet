@@ -92,5 +92,12 @@
     return result;
 }
 
+-(LMTWallet *) takeMoney: (AGTMoney *) money{
+    
+    NSUInteger index = [self.moneys indexOfObject:money];
+    [self.moneys removeObjectAtIndex:index];
+    
+    return self;
+}
 
 @end

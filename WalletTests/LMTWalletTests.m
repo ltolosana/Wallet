@@ -79,6 +79,21 @@
     
 }
 
+// 30€ + 10€ - 10€ = 30€
+-(void) testSimpleSubstractionWithReduction{
+
+    LMTBroker *broker = [[LMTBroker alloc] init];
+    LMTWallet *wallet = [[LMTWallet alloc] initWithAmount:30 currency:@"EUR"];
+    
+    [wallet plus: [AGTMoney euroWithAmount:10]];
+    
+    [wallet takeMoney: [AGTMoney euroWithAmount:10]];
+    
+    AGTMoney *reduced = [broker reduce:wallet toCurrency:@"EUR"];
+
+    XCTAssertEqualObjects(reduced, [AGTMoney euroWithAmount:30], @"30€ + 10€ - 10€ = 30€");
+    
+}
 
 
 @end
